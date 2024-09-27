@@ -1,6 +1,7 @@
 # Welcome to Python: A Beginner's Guide
 print('some')
 print("Hello, world!")
+print("costamcostam")
 
 name = "Barbara"
 age = 25
