@@ -8,7 +8,23 @@ age = 25
 print(name)
 print(age)
 
+list(1,2,3,4)
+list_=['path1','path2','path3']
+for i, path in enumerate(list_):
+    if i == 0:
+        df =pd.read_csv(path)
+    else:
+        df_new = pd.read_csv(path)
+        df =df.merge(df_new, on='column1')
+
+#for _ in [1,2,3,4] zamiast i
+for _ in list_:
+    print("Hello, Python!")
+
 for i in range(5):
+    print(f"Hello, Python!"{i})
+
+for i in []:
     print("Hello, Python!")
 
 x = 10
@@ -37,6 +53,23 @@ def calculate_area(length, width):
     area = length * width
     return area
 
+def calculate_area1(length, width):
+    if length > 100:
+        return width # return = wyjdz z funkcji
+    area= length * width
+        return area
+def calculate_area2(length, width):
+    if length > 100:
+        length = length/100
+    area= length * width
+        return area
+def calculate_area3(length, width):
+    if length > 100:
+        length = length/100
+    else:
+        raise('issue with len')
+    area= length * width
+        return area
 
 # Call the function with specific values for length and width
 result = calculate_area(5, 3)
