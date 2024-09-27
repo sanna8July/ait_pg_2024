@@ -9,8 +9,23 @@ age = 25
 print(name)
 print(age)
 
+list_ = ["x", "y", "z"]
+import pandas as pd
+
+for i, path in enumerate(list_):
+    if i == 0:
+        #df = pd.read_csv(path)
+    else:
+        df_new = pd.read_csv(path)
+        df = pd.merge(df_new)
+    print(f"load data path: {path}")
+
+
+for _ in list_:
+    print(f"Hello, Python!")
+
 for i in range(5):
-    print("Hello, Python!")
+    print(f"Hello, Python! {i}")
 
 x = 10
 
@@ -35,6 +50,8 @@ for fruit in fruits:
 
 # Define a function to calculate the area of a rectangle
 def calculate_area(length, width):
+    if length > 100:
+        return length
     area = length * width
     return area
 
