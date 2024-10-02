@@ -21,7 +21,7 @@ print(f"Sequential Execution Time: {sequential_duration:.4f} seconds")
 start_time = time()
 squares_parallel = Parallel(n_jobs=-1)(delayed(calculate_square)(i, num) for i, num in enumerate(numbers))
 parallel_duration = time() - start_time
-print(f"Parallel Execution Time: {parallel_duration:.4f} seconds")
+print(f"Parallel Execution Time: {parallel_duration:.4f} seconds ")
 
 # Show speedup
 speedup = sequential_duration / parallel_duration
